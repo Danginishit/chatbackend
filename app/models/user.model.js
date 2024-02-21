@@ -10,7 +10,8 @@ const status = {
 const user = Sequilize.define('user',{
     id:{
         type:DataTypes.BIGINT,
-        primaryKey:true
+        primaryKey:true,
+        autoIncrement: true,
     },
     username:DataTypes.STRING,
     password:DataTypes.STRING,
@@ -23,7 +24,7 @@ const user = Sequilize.define('user',{
         defaultValue: Sequilize.literal('CURRENT_TIMESTAMP'),
       },
 },{
-    tableName:'user',
+    tableName:'_user',
     timestamps: false,
 });
 

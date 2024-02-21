@@ -7,7 +7,8 @@ const {DataTypes} =require('sequelize')
 const chat = Sequilize.define('chat',{
     id:{
         type:DataTypes.BIGINT,
-        primaryKey:true
+        primaryKey:true,
+        autoIncrement: true,
     },
     from_user:DataTypes.BIGINT,
     to_user:DataTypes.BIGINT,
